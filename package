@@ -1,7 +1,7 @@
 ttf-font-awesome
 libinput
 rofi
-terminator
+kitty
 nitrogen
 feh
 lxappearance
@@ -10,3 +10,6 @@ arandr
 xbacklight
 maim
 xclip
+polybar
+imagemagick
+scrot
