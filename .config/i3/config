@@ -77,6 +77,8 @@ bindsym $mod+d exec rofi -show run
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+bindsym $mod+Tab exec rofi -show windowcd
+
 gaps inner 5
 gaps outer 5
 
