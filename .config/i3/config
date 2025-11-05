@@ -46,8 +46,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 #screenshot
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
@@ -70,7 +70,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun -show-icons
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -221,6 +221,8 @@ client.focused $ibgcolor $ibgcolor $textcolor $ibgcolor
 #        }
 #}
 
-exec_always --no-startup-id conky
+exec_always --no-startup-id conky -c ~/.config/conky/right.conf &
+exec_always --no-startup-id conky -c ~/.config/conky/middle.conf &
+exec_always --no-startup-id conky -c ~/.config/conky/left.conf &
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
