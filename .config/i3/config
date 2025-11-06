@@ -221,8 +221,6 @@ client.focused $ibgcolor $ibgcolor $textcolor $ibgcolor
 #        }
 #}
 
-exec_always --no-startup-id conky -c ~/.config/conky/right.conf &
-exec_always --no-startup-id conky -c ~/.config/conky/middle.conf &
-exec_always --no-startup-id conky -c ~/.config/conky/left.conf &
+exec_always --no-startup-id ~/.config/i3/conky.sh
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh

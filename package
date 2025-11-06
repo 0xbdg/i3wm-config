@@ -17,3 +17,5 @@ conky
 i3
 i3lock
 btop
+dunst
+libnotify
